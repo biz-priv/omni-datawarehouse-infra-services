@@ -1,0 +1,5 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni/{{ stack_group_config.Environment }}/mockUser1/api/key/name
+  Value: !stack_output {{ stack_group_config.Environment }}/api-gateway/mockUser1-key.yaml::Name
+  Description: mockUser1 API key name - {{ stack_group_config.Environment }}
