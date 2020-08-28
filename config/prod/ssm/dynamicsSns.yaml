@@ -1,0 +1,8 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: Dynamics-SNS-{{ stack_group_config.Environment }}
+  Value: "arn:aws:sns:us-east-1:332281781429:dynamics_crm_notify"
+  Description: Dynamics CRM Prod SNS
+stack_tags:
+  Project: Omni_Dynamics
+  Version: 1.0
