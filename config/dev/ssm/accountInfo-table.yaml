@@ -3,6 +3,3 @@ parameters:
   Name: /omni-dw/{{ stack_group_config.Environment }}/accountInfoTable
   Value: "omni-dw-account-info-dev"
   Description: Account Info DynamoDB Table
-
-
-  

@@ -1,0 +1,5 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/{{ stack_group_config.Environment }}/entitlement/table/sync/s3/key
+  Value: "Data/DB_api_cust_housebill_data000"
+  Description: Customer Entitlement Sync S3 Key - {{ stack_group_config.Environment }}

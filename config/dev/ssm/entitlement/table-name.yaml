@@ -1,0 +1,5 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/{{ stack_group_config.Environment }}/customerEntitlementTable
+  Value: !stack_output {{ stack_group_config.Environment }}/dynamo/entitlement.yaml::Name
+  Description: Customer Entitlement DynamoDB Table Name - {{ stack_group_config.Environment }}
