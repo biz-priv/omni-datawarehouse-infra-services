@@ -1,0 +1,25 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: "Template to create s3 Bucket using CFT"
+
+Parameters:
+  Environment:
+    Type: String
+  BucketName:
+    Type: String
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Join ['-', [!Ref BucketName, !Ref Environment]]
+      VersioningConfiguration:
+        Status: Enabled
+      BucketEncryption: 
+         ServerSideEncryptionConfiguration: 
+           -
+            ServerSideEncryptionByDefault:
+              SSEAlgorithm: AES256
+              
+Outputs:
+  Name:
+    Value: !Ref Bucket

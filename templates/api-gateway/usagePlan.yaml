@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: Creates an API usage plan
+
+Parameters:
+  Environment:
+    Type: String
+  Description:
+    Type: String
+  UsagePlanName:
+    Type: String
+
+Resources:
+  UsagePlan:
+    Type: AWS::ApiGateway::UsagePlan
+    Properties:
+      Description: !Join ['-', [!Ref Description, !Ref Environment]]
+      UsagePlanName: !Join ['-', [!Ref UsagePlanName, !Ref Environment]]
+
+Outputs:
+  Id:
+    Value: !Ref UsagePlan
+  Name: 
+    Value: !Join ['-', [!Ref UsagePlanName, !Ref Environment]]
