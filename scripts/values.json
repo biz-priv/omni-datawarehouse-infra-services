@@ -1,0 +1,18 @@
+[
+    {
+        "key": "/omni-dw/ENVIRONMENT/bol/API_KEY",
+        "value": "<INSERT VALUE HERE>"
+    },
+    {
+        "key": "/omni-dw/ENVIRONMENT/db/user",
+        "value": "<INSERT VALUE HERE>"
+    },
+    {
+        "key": "/omni-dw/ENVIRONMENT/db/password",
+        "value": "<INSERT VALUE HERE>"
+    },
+    {
+        "key": "/omni-dw/ENVIRONMENT/db/host",
+        "value": "<INSERT VALUE HERE>"
+    }
+]

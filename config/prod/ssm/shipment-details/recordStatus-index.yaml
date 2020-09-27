@@ -1,8 +1,8 @@
 template_path: ssm/parameter.yaml
 parameters:
-  Name: /omni-dw/{{ stack_group_config.Environment }}/entitlement/houseBillNumber/index
-  Value: "HouseBillNumberindex"
-  Description: Customer Entitlement Table House Bill Number Index - {{ stack_group_config.Environment }}
+  Name: /omni-dw/{{ stack_group_config.Environment }}/shipmentDetails/recordStatus/index
+  Value: "RecordStatusIndex"
+  Description: Shipment Details Table Index - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
   "CreateBy": {{ stack_group_config.CreateBy }}

@@ -1,8 +1,0 @@
-template_path: ssm/parameter.yaml
-parameters:
-  Name: Dynamics-URL-{{ stack_group_config.Environment }}
-  Value: "https://prod-89.westus.logic.azure.com:443/workflows/08bd801fbcba42f390d9a5e9c64da64b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=BaVO9IF7rVSfoYqoq_f71xh91-oC4zzUuirUqMWwkKU"
-  Description: Dynamics CRM Prod Url
-stack_tags:
-  Project: Omni_Dynamics
-  Version: 1.0
