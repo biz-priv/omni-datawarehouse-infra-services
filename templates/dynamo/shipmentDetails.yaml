@@ -13,45 +13,21 @@ Resources:
       BillingMode: PAY_PER_REQUEST
       AttributeDefinitions:
       - 
-        AttributeName: "CustomerID"
-        AttributeType: "S"
-      - 
-        AttributeName: "FileNumber"
-        AttributeType: "S"
-      - 
         AttributeName: "HouseBillNumber"
         AttributeType: "S"
+      
       KeySchema:
       - 
-        AttributeName: "FileNumber"
-        KeyType: "HASH"
-      - 
         AttributeName: "HouseBillNumber"
-        KeyType: "RANGE"
+        KeyType: "HASH"
+
       GlobalSecondaryIndexes:
-      -
-        IndexName: "FileNumberindex"
-        KeySchema:
-        - 
-          AttributeName: "CustomerID"
-          KeyType: "HASH"
-        - 
-          AttributeName: "FileNumber"
-          KeyType: "RANGE"
-        Projection:
-          ProjectionType: "ALL"
-        ProvisionedThroughput:
-          ReadCapacityUnits: "0"
-          WriteCapacityUnits: "0"
       - 
-        IndexName: "HouseBillNumberindex"
+        IndexName: "HouseBillKeyIndex"
         KeySchema:
-        - 
-          AttributeName: "CustomerID"
-          KeyType: "HASH"
         - 
           AttributeName: "HouseBillNumber"
-          KeyType: "RANGE"
+          KeyType: "HASH"
         Projection:
           ProjectionType: "ALL"
         ProvisionedThroughput:

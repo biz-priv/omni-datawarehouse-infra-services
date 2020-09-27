@@ -1,9 +1,15 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: Creates an API key
+
 Parameters:
   Environment: 
     Type: String
   Name: 
     Type: String
   Description: 
+    Type: String
+  UsagePlanId: 
     Type: String
 
 Resources:
@@ -13,7 +19,13 @@ Resources:
       Name: !Join ['-', [!Ref Name, !Ref Environment]]
       Description: !Join ['-', [!Ref Description, !Ref Environment]]
       Enabled: 'true'
-      
+  
+  UsagePlanAssociation:
+    Type: AWS::ApiGateway::UsagePlanKey
+    Properties: 
+      KeyId: !Ref ApiKey
+      KeyType: 'API_KEY'
+      UsagePlanId: !Ref UsagePlanId
 
 Outputs:
   Id:

@@ -14,44 +14,19 @@ Resources:
       AttributeDefinitions:
       - 
         AttributeName: "CustomerID"
-        AttributeType: "S"
-      - 
-        AttributeName: "FileNumber"
-        AttributeType: "S"
-      - 
-        AttributeName: "HouseBillNumber"
-        AttributeType: "S"
+        AttributeType: "S"    
       KeySchema:
       - 
-        AttributeName: "FileNumber"
+        AttributeName: "CustomerID"
         KeyType: "HASH"
-      - 
-        AttributeName: "HouseBillNumber"
-        KeyType: "RANGE"
+      
       GlobalSecondaryIndexes:
-      -
-        IndexName: "FileNumberindex"
-        KeySchema:
-        - 
-          AttributeName: "CustomerID"
-          KeyType: "HASH"
-        - 
-          AttributeName: "FileNumber"
-          KeyType: "RANGE"
-        Projection:
-          ProjectionType: "ALL"
-        ProvisionedThroughput:
-          ReadCapacityUnits: "0"
-          WriteCapacityUnits: "0"
       - 
-        IndexName: "HouseBillNumberindex"
+        IndexName: "CustomerIDIndex"
         KeySchema:
         - 
           AttributeName: "CustomerID"
           KeyType: "HASH"
-        - 
-          AttributeName: "HouseBillNumber"
-          KeyType: "RANGE"
         Projection:
           ProjectionType: "ALL"
         ProvisionedThroughput:

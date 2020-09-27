@@ -1,8 +1,7 @@
-template_path: api-gateway/usagePlan.yaml
+template_path: dynamo/shipmentDetails.yaml
 parameters:
   Environment: {{ stack_group_config.Environment }}
-  Description: mock API usageplan for all service APIs - {{ stack_group_config.Environment }}
-  UsagePlanName: "mock-api-usageplan"
+  TableName: omni-dw-shipment-details
 stack_tags:
   "Application": {{ stack_group_config.Application }}
   "CreateBy": {{ stack_group_config.CreateBy }}

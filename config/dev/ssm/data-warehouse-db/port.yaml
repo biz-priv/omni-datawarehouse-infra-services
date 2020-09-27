@@ -1,8 +1,8 @@
-template_path: api-gateway/usagePlan.yaml
+template_path: ssm/parameter.yaml
 parameters:
-  Environment: {{ stack_group_config.Environment }}
-  Description: mock API usageplan for all service APIs - {{ stack_group_config.Environment }}
-  UsagePlanName: "mock-api-usageplan"
+  Name: /omni-dw/{{ stack_group_config.Environment }}/db/port
+  Value: "5439"
+  Description: Redshift Stage Database Port - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
   "CreateBy": {{ stack_group_config.CreateBy }}

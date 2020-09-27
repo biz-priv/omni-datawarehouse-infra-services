@@ -2,4 +2,10 @@ template_path: api-gateway/key.yaml
 parameters:
   Environment: {{ stack_group_config.Environment }}
   Name: "mockUser1-key"
-  Description: "API Key for mock User1"
+  Description: API Key for mock User1 - {{ stack_group_config.Environment }}
+  UsagePlanId: !stack_output {{ stack_group_config.Environment }}/api-gateway/mockUsageplan.yaml::Id
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
