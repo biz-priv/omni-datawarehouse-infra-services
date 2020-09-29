@@ -15,7 +15,9 @@ Resources:
       - 
         AttributeName: "HouseBillNumber"
         AttributeType: "S"
-      
+      - 
+        AttributeName: "RecordStatus"
+        AttributeType: "S"
       KeySchema:
       - 
         AttributeName: "HouseBillNumber"
@@ -27,6 +29,17 @@ Resources:
         KeySchema:
         - 
           AttributeName: "HouseBillNumber"
+          KeyType: "HASH"
+        Projection:
+          ProjectionType: "ALL"
+        ProvisionedThroughput:
+          ReadCapacityUnits: "0"
+          WriteCapacityUnits: "0"
+      - 
+        IndexName: "RecordStatusIndex"
+        KeySchema:
+        - 
+          AttributeName: "RecordStatus"
           KeyType: "HASH"
         Projection:
           ProjectionType: "ALL"
