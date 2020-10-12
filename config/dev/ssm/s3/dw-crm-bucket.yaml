@@ -1,0 +1,10 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-crm/{{ stack_group_config.Environment }}/bucket
+  Value: !stack_output {{ stack_group_config.Environment }}/s3/dw-crm-bucket.yaml::Name
+  Description: Omni DW CRM Bucket - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}

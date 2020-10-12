@@ -1,0 +1,10 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-crm/{{ stack_group_config.Environment }}/customers/url
+  Value: "Customer table URL - Update here once created in MS Flow"
+  Description: Omni crm customers table URL - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
