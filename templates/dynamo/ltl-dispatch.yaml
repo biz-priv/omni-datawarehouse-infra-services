@@ -1,0 +1,42 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Parameters:
+  Environment: 
+    Type: String
+  TableName: 
+    Type: String
+    
+Resources:
+  Table:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+      - 
+        AttributeName: "FileNumber"
+        AttributeType: "S"
+      KeySchema:
+      - 
+        AttributeName: "FileNumber"
+        KeyType: "HASH"
+      GlobalSecondaryIndexes:
+      -
+        IndexName: "FileNumberIndex"
+        KeySchema:
+        - 
+          AttributeName: "FileNumber"
+          KeyType: "HASH"
+        Projection:
+          ProjectionType: "ALL"
+        ProvisionedThroughput:
+          ReadCapacityUnits: "0"
+          WriteCapacityUnits: "0"
+      TableName: !Join ['-', [!Ref TableName, !Ref Environment]]
+      SSESpecification:
+        SSEEnabled: true 
+
+Outputs:
+  Name:
+    Value: !Ref Table
+  Arn:
+    Value: !GetAtt Table.Arn
