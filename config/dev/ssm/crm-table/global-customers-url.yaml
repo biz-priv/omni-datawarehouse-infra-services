@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-crm/{{ stack_group_config.Environment }}/globalCustomers/url
-  Value: "https://prod-99.westus.logic.azure.com:443/workflows/f62fa8a178d246d2a5922a15163ccf92/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=8GG7nyhz4_Dd6SwZfDrmHLFPQ9OuNJJ-8d3_Kg5KdN4"
+  Value: "https://prod-69.westus.logic.azure.com:443/workflows/2c8512e032cf4d91a8be8d01c48f6472/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yyieQ9ikHScRwTVs34CTZFAaWQOpLjnEQuGoPo-LZzc"
   Description: Omni crm global customers table URL - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
