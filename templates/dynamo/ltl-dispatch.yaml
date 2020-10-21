@@ -13,33 +13,18 @@ Resources:
       BillingMode: PAY_PER_REQUEST
       AttributeDefinitions:
       - 
-        AttributeName: "HouseBillNumber"
-        AttributeType: "S"
-      - 
-        AttributeName: "RecordStatus"
+        AttributeName: "FileNumber"
         AttributeType: "S"
       KeySchema:
       - 
-        AttributeName: "HouseBillNumber"
+        AttributeName: "FileNumber"
         KeyType: "HASH"
-
       GlobalSecondaryIndexes:
-      - 
-        IndexName: "HouseBillKeyIndex"
+      -
+        IndexName: "FileNumberIndex"
         KeySchema:
         - 
-          AttributeName: "HouseBillNumber"
-          KeyType: "HASH"
-        Projection:
-          ProjectionType: "ALL"
-        ProvisionedThroughput:
-          ReadCapacityUnits: "0"
-          WriteCapacityUnits: "0"
-      - 
-        IndexName: "RecordStatusIndex"
-        KeySchema:
-        - 
-          AttributeName: "RecordStatus"
+          AttributeName: "FileNumber"
           KeyType: "HASH"
         Projection:
           ProjectionType: "ALL"
