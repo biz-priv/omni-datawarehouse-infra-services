@@ -1,0 +1,10 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw-fourkites/{{ stack_group_config.Environment }}/tlDispatch/table
+  Value: !stack_output {{ stack_group_config.Environment }}/dynamo/tl-dispatch.yaml::Name 
+  Description: Omni fourkites table name - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
