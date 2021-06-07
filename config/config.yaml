@@ -1,5 +1,5 @@
 project_code: omni
 region: us-east-1
-AvailabilityZoneA: us-west-2a
-AvailabilityZoneB: us-west-2b
-# profile: omni
+AvailabilityZoneA: us-east-1a
+AvailabilityZoneB: us-east-1b
+profile: omni
