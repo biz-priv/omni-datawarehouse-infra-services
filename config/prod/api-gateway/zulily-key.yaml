@@ -1,8 +1,8 @@
 template_path: api-gateway/key.yaml
 parameters:
   Environment: {{ stack_group_config.Environment }}
-  Name: "Illumina Prod Key"
-  Description: ILLUMINA CAMBRIDGE LTD - {{ stack_group_config.Environment }}
+  Name: "Zulily LLC key"
+  Description: Zulily LLC - {{ stack_group_config.Environment }}
   UsagePlanId: !stack_output {{ stack_group_config.Environment }}/api-gateway/mockUsageplan.yaml::Id
 stack_tags:
   "Application": {{ stack_group_config.Application }}

@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-crm/{{ stack_group_config.Environment }}/customers/timestamp
-  Value: "2020-10-08 16:52:45"
+  Value: "2020-10-12 19:30:42"
   Description: Omni crm customers table timestamp - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}

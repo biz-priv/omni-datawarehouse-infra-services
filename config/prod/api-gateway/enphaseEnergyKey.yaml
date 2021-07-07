@@ -1,8 +1,8 @@
 template_path: api-gateway/key.yaml
 parameters:
   Environment: {{ stack_group_config.Environment }}
-  Name: "Admin Key Prod"
-  Description: Eventing Admin Key - {{ stack_group_config.Environment }}
+  Name: "Enphase Energy - key"
+  Description: API Key for Enphase Energy - {{ stack_group_config.Environment }}
   UsagePlanId: !stack_output {{ stack_group_config.Environment }}/api-gateway/mockUsageplan.yaml::Id
 stack_tags:
   "Application": {{ stack_group_config.Application }}

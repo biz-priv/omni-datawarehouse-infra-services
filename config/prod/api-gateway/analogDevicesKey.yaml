@@ -1,8 +1,8 @@
 template_path: api-gateway/key.yaml
 parameters:
   Environment: {{ stack_group_config.Environment }}
-  Name: "illumina-key"
-  Description: API Key for illumina devint - {{ stack_group_config.Environment }}
+  Name: "Analog Devices (WLMG) - key"
+  Description: API Key for Analog Devices (WLMG) - {{ stack_group_config.Environment }}
   UsagePlanId: !stack_output {{ stack_group_config.Environment }}/api-gateway/mockUsageplan.yaml::Id
 stack_tags:
   "Application": {{ stack_group_config.Application }}

@@ -1,8 +1,8 @@
 template_path: api-gateway/key.yaml
 parameters:
   Environment: {{ stack_group_config.Environment }}
-  Name: "mockUser-key"
-  Description: API Key for mock User - {{ stack_group_config.Environment }}
+  Name: "Power Integration - key"
+  Description: API Key for Power Integration - {{ stack_group_config.Environment }}
   UsagePlanId: !stack_output {{ stack_group_config.Environment }}/api-gateway/mockUsageplan.yaml::Id
 stack_tags:
   "Application": {{ stack_group_config.Application }}

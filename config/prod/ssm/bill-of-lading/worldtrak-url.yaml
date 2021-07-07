@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-dw/{{ stack_group_config.Environment }}/billOfLading/wt/url
-  Value: 'https://websli.omnilogistics.com/wtProd/gethawb/v1/json/'
+  Value: 'https://websli.omnilogistics.com/wtTest/gethawb/v1/json/'
   Description: Worldtrak bill of lading URL - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}

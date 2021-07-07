@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-dw-fourkites/{{ stack_group_config.Environment }}/url
-  Value: "https://tracking-api.fourkites.com/api/v1/tracking/dispatcher_updates"
+  Value: "https://tracking-api-staging.fourkites.com/api/v1/tracking/dispatcher_updates"
   Description: Omni fourkites URL - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
