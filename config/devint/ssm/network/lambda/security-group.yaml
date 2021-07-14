@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-dw/{{ stack_group_config.Environment }}/lambda/sgId
-  Value: "sg-02f89a176b75daa56"
+  Value: "sg-03e94bb2fd2da9d07"
   Description: vpc security group ID - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
