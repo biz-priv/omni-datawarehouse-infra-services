@@ -31,11 +31,7 @@ pipeline {
             when {
                 anyOf {
                     branch 'master';
-                    branch 'develop';
-                    branch 'devint';
-                    branch 'bugfix/*';
-                    branch 'feature/*'
-                    
+                    branch 'develop'
                 }
                 expression {
                     return true;
@@ -43,6 +39,26 @@ pipeline {
             }
             steps {
                 withAWS(credentials: 'omni-aws-creds'){
+                    sh """
+                    sceptre launch ${env.ENVIRONMENT} --yes
+                    """
+                }
+            }
+        }
+        stage('Code Deploy'){
+            when {
+                anyOf {
+                    branch 'devint';
+                    branch 'bugfix/*';
+                    branch 'feature/*';
+                    branch 'task/*';
+                }
+                expression {
+                    return true;
+                }
+            }
+            steps {
+                withAWS(credentials: 'bizdev-aws-creds'){
                     sh """
                     sceptre launch ${env.ENVIRONMENT} --yes
                     """
