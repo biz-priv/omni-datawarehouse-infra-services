@@ -27,7 +27,7 @@ pipeline {
                 }
             }
         }
-        stage('Code Deploy'){
+        stage('Omni Deploy'){
             when {
                 anyOf {
                     branch 'master';
@@ -45,7 +45,7 @@ pipeline {
                 }
             }
         }
-        stage('Code Deploy'){
+        stage('Bizdev Deploy'){
             when {
                 anyOf {
                     branch 'devint';
