@@ -1,18 +1,18 @@
 [
     {
         "key": "/omni-dw/ENVIRONMENT/bol/API_KEY",
-        "value": "8e3855c5e046cbb4fe2ea4cd20a40a"
+        "value": "<INSERT VALUE HERE>"
     },
     {
         "key": "/omni-dw/ENVIRONMENT/db/user",
-        "value": "bceuser1"
+        "value": "<INSERT VALUE HERE>"
     },
     {
         "key": "/omni-dw/ENVIRONMENT/db/password",
-        "value": "BizCloudExp1"
+        "value": "<INSERT VALUE HERE>"
     },
     {
         "key": "/omni-dw/ENVIRONMENT/db/host",
-        "value": "10.9.120.41"
+        "value": "<INSERT VALUE HERE>"
     }
 ]
