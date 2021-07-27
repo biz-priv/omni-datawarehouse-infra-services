@@ -2,3 +2,4 @@ project_code: omni
 region: us-east-1
 AvailabilityZoneA: us-east-1a
 AvailabilityZoneB: us-east-1b
+profile: omni
