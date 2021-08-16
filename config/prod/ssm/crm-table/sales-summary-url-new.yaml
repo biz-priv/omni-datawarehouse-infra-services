@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-crm/{{ stack_group_config.Environment }}/salesSummary/url/new
-  Value: "https://prod-84.westus.logic.azure.com:443/workflows/ab0b2b68824842d7b625e12e032ceb95/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=movPc2AaqBiry3qaXLeodhWRU83er6WZtQWhlm60KMo"
+  Value: "https://prod-128.westus.logic.azure.com:443/workflows/e8693d4167474f34aaefdd6fc644c060/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=22U4mxn02F7FWTc4TbJ61kMV8sb6zKtTUqVCwl1wvk8"
   Description: Omni crm sales summary new table URL - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}

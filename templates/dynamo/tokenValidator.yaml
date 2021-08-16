@@ -20,6 +20,9 @@ Resources:
       - 
         AttributeName: "ApiKey"
         AttributeType: "S"
+      - 
+        AttributeName: "WebTrackId"
+        AttributeType: "S"
       KeySchema:
       - 
         AttributeName: "CustomerID"
@@ -36,6 +39,17 @@ Resources:
           KeyType: "HASH"
         Projection:
           ProjectionType: "KEYS_ONLY"
+        ProvisionedThroughput:
+          ReadCapacityUnits: "5"
+          WriteCapacityUnits: "5"
+      - 
+        IndexName: "WebTrackId"
+        KeySchema:
+        - 
+          AttributeName: "WebTrackId"
+          KeyType: "HASH"
+        Projection:
+          ProjectionType: "ALL"
         ProvisionedThroughput:
           ReadCapacityUnits: "5"
           WriteCapacityUnits: "5"
