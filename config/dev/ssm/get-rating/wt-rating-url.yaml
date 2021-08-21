@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-dw/{{ stack_group_config.Environment }}/api/rating
-  Value: "https://worldtrak.omnilogistics.com/WTKServices/GetRating.asmx"
+  Value: "https://wttest.omnilogistics.com/WTKServices/getrating.asmx"
   Description: WT Get rating SOAP Endpoint URL - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
