@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
-  Name: /omni-dw/{{ stack_group_config.Environment }}/project44/table/payload
-  Value: !stack_output {{ stack_group_config.Environment }}/dynamo/project44Payload.yaml::Name
+  Name: /omni-dw/{{ stack_group_config.Environment }}/project44/table
+  Value: !stack_output {{ stack_group_config.Environment }}/dynamo/project44.yaml::Name
   Description: Project 44 DynamoDB Table - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
