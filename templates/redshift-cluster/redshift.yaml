@@ -1,0 +1,34 @@
+Parameters:
+  Environment:
+    Type: String
+  ClusterIdentifier:
+    Type: String
+  ClusterSubnetGroupName: 
+    Type: String
+  ClusterType: 
+    Type: String
+  DBName: 
+    Type: String
+  MasterUsername: 
+    Type: String
+  MasterUserPassword: 
+    Type: String
+  NodeType: 
+    Type: String
+  
+Resources:
+  RedshiftCluster:
+    Type: AWS::Redshift::Cluster
+    Properties: 
+      AvailabilityZone: "us-east-1a"
+      ClusterIdentifier: !Ref ClusterIdentifier 
+      ClusterSubnetGroupName: !Ref ClusterSubnetGroupName
+      ClusterType: !Ref ClusterType
+      DBName: !Ref DBName
+      MasterUsername: !Ref MasterUsername
+      MasterUserPassword: !Ref MasterUserPassword
+      NodeType: !Ref NodeType
+
+Outputs:
+  Name:
+    Value: !Ref RedshiftCluster
