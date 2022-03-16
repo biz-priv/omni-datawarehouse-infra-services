@@ -1,0 +1,10 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/{{ stack_group_config.Environment }}/netsuitAR/authConfig/tokenKey
+  Value: "f61cd294be68ee81be399292fc8df43cad3ac5d3e3c97878c69a08af8b5d3473"
+  Description: netsuite authconfig tokenKey - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
