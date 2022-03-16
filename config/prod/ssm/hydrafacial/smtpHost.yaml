@@ -1,0 +1,11 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/hydraFacialReport/{{ stack_group_config.Environment }}/smtp/host
+  Value: "email-smtp.us-east-1.amazonaws.com"
+  Description: Hydrafacial smtp host - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
+

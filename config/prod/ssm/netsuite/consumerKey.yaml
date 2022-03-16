@@ -1,0 +1,10 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/{{ stack_group_config.Environment }}/netsuitAR/authConfig/consumerKey
+  Value: "dc5a854e86c5bd48417c26ec1287cb5577f19d147acb48415e95ceb475ce04a5"
+  Description: netsuite authconfig consumerKey - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
