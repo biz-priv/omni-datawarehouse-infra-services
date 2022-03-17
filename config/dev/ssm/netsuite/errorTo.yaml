@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-dw/{{ stack_group_config.Environment }}/netsuitAR/errorEmail/to
-  Value: "psotelo@omnilogistics.com,bcastilleja@omnilogistics.com,swillingham@omnilogistics.com,vbibi@omnilogistics.com,wwaller@omnilogistics.com,kiranv@bizcloudexperts.com,kazi.ali@bizcloudexperts.com,priyanka@bizcloudexperts.com"
+  Value: "kazi.ali@bizcloudexperts.com,kiranv@bizcloudexperts.com,swillingham@omnilogistics.com,psotelo@omnilogistics.com,bcastilleja@omnilogistics.com"
   Description: netsuite errorEmail to - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}

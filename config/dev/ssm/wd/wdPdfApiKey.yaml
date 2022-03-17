@@ -1,8 +1,8 @@
 template_path: ssm/parameter.yaml
 parameters:
-  Name: /omni-dw/{{ stack_group_config.Environment }}/db/name
-  Value: "prod_datamodel"
-  Description: Redshift Stage Database Name - {{ stack_group_config.Environment }}
+  Name: /omni-dw/{{ stack_group_config.Environment }}/wdPdfApiKey
+  Value: "8e3855c5e046cbb4fe2ea4cd20a40a"
+  Description: WD wdPdfApiKey - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
   "CreateBy": {{ stack_group_config.CreateBy }}
