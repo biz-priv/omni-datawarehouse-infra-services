@@ -1,0 +1,47 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: "Template to create event rule fror s3 upload objects to ECS Task"
+
+Parameters:
+  BucketName:
+    Type: String
+
+Resources:
+  ecsEventRuleForFileUpload:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: "EventRule"
+      State: "ENABLED"
+      EventPattern:
+        source:
+          - "aws.s3"
+        detail-type:
+          - 'AWS API Call via CloudTrail'
+        detail:
+          eventSource:
+            - s3.amazonaws.com
+          eventName:
+            - "PutObject"
+            - "CompleteMultipartUpload"
+          requestParameters:
+            bucketName: [!Ref BucketName]
+      Targets:
+        - Id: "poc-bluegreen-cluster"
+          Arn: "arn:aws:ecs:us-east-1:083868342691:cluster/poc-bluegreen-cluster"
+          RoleArn: "arn:aws:iam::083868342691:role/service-role/Amazon_EventBridge_Invoke_ECS_148089520"
+          EcsParameters:
+            TaskCount: 1
+            TaskDefinitionArn: "arn:aws:ecs:us-east-1:083868342691:task-definition/sample-nodejs:17"
+            LaunchType: FARGATE
+            NetworkConfiguration:
+              AwsVpcConfiguration:
+                SecurityGroups: 
+                  - "sg-00c17d177191d96f3"
+                Subnets: 
+                  - "subnet-6790c83c"
+
+          InputTransformer:
+            InputPathsMap:
+              s3_bucket: "$.detail.requestParameters.bucketName"
+              s3_key: "$.detail.requestParameters.key"
+            InputTemplate: '{ "containerOverrides": [ { "name": "{THE_NAME_OF_YOUR_CONTAINER_DEFINITION}", "environment": [ { "name": "S3_BUCKET", "value": "<s3_bucket>" }, { "name": "S3_KEY", "value": "<s3_key>" }] } ] }'
