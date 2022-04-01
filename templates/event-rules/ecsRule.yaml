@@ -33,8 +33,10 @@ Resources:
             TaskCount: 1
             TaskDefinitionArn: "arn:aws:ecs:us-east-1:083868342691:task-definition/sample-nodejs:17"
             LaunchType: FARGATE
+            PlatformVersion: "1.3.0"
             NetworkConfiguration:
               AwsVpcConfiguration:
+                AssignPublicIp: "ENABLED"
                 SecurityGroups: 
                   - "sg-00c17d177191d96f3"
                 Subnets: 
@@ -44,4 +46,4 @@ Resources:
             InputPathsMap:
               s3_bucket: "$.detail.requestParameters.bucketName"
               s3_key: "$.detail.requestParameters.key"
-            InputTemplate: '{ "containerOverrides": [ { "name": "{THE_NAME_OF_YOUR_CONTAINER_DEFINITION}", "environment": [ { "name": "S3_BUCKET", "value": "<s3_bucket>" }, { "name": "S3_KEY", "value": "<s3_key>" }] } ] }'
+            InputTemplate: '{ "containerOverrides": [ { "name": "sample-nodejs-app", "environment": [ { "name": "S3_BUCKET", "value": "<s3_bucket>" }, { "name": "S3_KEY", "value": "<s3_key>" }] } ] }'
