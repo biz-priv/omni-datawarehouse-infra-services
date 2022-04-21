@@ -1,9 +1,0 @@
-template_path: dynamo/entitlement.yaml
-parameters:
-  Environment: {{ stack_group_config.Environment }}
-  TableName: omni-dw-customer-entitlement
-stack_tags:
-  "Application": {{ stack_group_config.Application }}
-  "CreateBy": {{ stack_group_config.CreateBy }}
-  "Version": {{ stack_group_config.Version }}
-  "Environment": {{ stack_group_config.Environment }}

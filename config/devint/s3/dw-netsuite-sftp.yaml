@@ -1,9 +1,0 @@
-template_path: s3/bucket.yaml
-parameters:
-  Environment: {{ stack_group_config.Environment }}
-  BucketName: "omni-dw-netsuite-sftp-replica"
-stack_tags:
-  "Application": {{ stack_group_config.Application }}
-  "CreateBy": {{ stack_group_config.CreateBy }}
-  "Version": {{ stack_group_config.Version }}
-  "Environment": {{ stack_group_config.Environment }}
