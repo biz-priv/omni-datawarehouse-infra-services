@@ -1,0 +1,10 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/{{ stack_group_config.Environment }}/wms/asn/receipt/sgId
+  Value: 'sg-06697b731d91f9726'
+  Description: wms security group id - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
