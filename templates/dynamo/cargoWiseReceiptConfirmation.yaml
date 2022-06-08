@@ -1,0 +1,45 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Parameters:
+  Environment: 
+    Type: String
+  TableName: 
+    Type: String
+    
+Resources:
+  Table:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+      - 
+        AttributeName: "customer_reference"
+        AttributeType: "S"
+      - 
+        AttributeName: "order_status"
+        AttributeType: "S"
+      KeySchema:
+      - 
+        AttributeName: "customer_reference"
+        KeyType: "HASH"
+      - 
+        AttributeName: "order_status"
+        KeyType: "RANGE"
+      GlobalSecondaryIndexes:
+      - 
+        IndexName: "customer_reference-index"
+        KeySchema:
+        - 
+          AttributeName: "customer_reference"
+          KeyType: "HASH"
+        Projection:
+          ProjectionType: "ALL"
+      TableName: !Join ['-', [!Ref TableName, !Ref Environment]]
+      SSESpecification:
+        SSEEnabled: true 
+
+Outputs:
+  Name:
+    Value: !Ref Table
+  Arn:
+    Value: !GetAtt Table.Arn

@@ -1,0 +1,9 @@
+template_path: dynamo/cargoWiseReceiptConfirmation.yaml
+parameters:
+  Environment: {{ stack_group_config.Environment }}
+  TableName: omni-receipt-datawarehouse
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
