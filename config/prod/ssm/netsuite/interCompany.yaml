@@ -1,0 +1,10 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/{{ stack_group_config.Environment }}/netsuit/intercompany 
+  Value: "https://1238234.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=649&deploy=1"
+  Description: netsuitAR intercompany - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}

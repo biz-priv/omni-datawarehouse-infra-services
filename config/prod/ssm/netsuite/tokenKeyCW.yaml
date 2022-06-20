@@ -1,0 +1,10 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/{{ stack_group_config.Environment }}/netsuitAR/authConfig/tokenKeyCW
+  Value: "944e444e99cf06f3c3e6d457f55a18ca270282537ff40c26adf93d011264a4e8"
+  Description: netsuitAR tokenkeyCW - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
