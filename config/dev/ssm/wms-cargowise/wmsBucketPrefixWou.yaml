@@ -1,8 +1,8 @@
 template_path: ssm/parameter.yaml
 parameters:
-  Name: /omni-dw/{{ stack_group_config.Environment }}/wms/adapter/username
-  Value: 'teidata'
-  Description: E-Adapter Username - {{ stack_group_config.Environment }}
+  Name: /omni-dw/{{ stack_group_config.Environment }}/wms/bucket/rules/prefix/wou
+  Value: 'CargoWiseOutbound/TRXELPTS2_WOU_'
+  Description: WMS Bucket Prefix WOU - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
   "CreateBy": {{ stack_group_config.CreateBy }}

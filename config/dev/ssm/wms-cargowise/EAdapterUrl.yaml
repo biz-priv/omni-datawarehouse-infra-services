@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-dw/{{ stack_group_config.Environment }}/wms/adapter/url
-  Value: 'https://trxts2services.wisegrid.net/eAdaptor'
+  Value: 'https://trxelpservices.wisegrid.net/eAdaptor'
   Description: E-Adapter URL - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
