@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-dw/{{ stack_group_config.Environment }}/wms/bucket/rules/prefix/win
-  Value: 'CargoWiseOutbound/TRXELPTS2_WIN_'
+  Value: 'CargoWiseOutbound/TRXELPELP_WIN_'
   Description: wms bucket prefix rules- {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
