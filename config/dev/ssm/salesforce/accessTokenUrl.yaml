@@ -1,0 +1,10 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/salesforce/{{ stack_group_config.Environment }}/baseUrl/token
+  Value: "https://test.salesforce.com/services/oauth2/token?grant_type=password&client_id=3MVG9MwiKwcReohwD7S1akUYBk4hpvo4cSXMxBGdTyypmZ0WOO6a8PBvfLYh6yzB1x70uJs5zDA==&client_secret=E8C29994EABD68BE28F127C98477FB726024A0D8E429104028DB50DC879D7BC0&username=sandboxsalesforceintegrations@omnilogistics.com.uatfull&password=Indian123$kv4BU33EcPFWf8x1XyS4Tg5F"
+  Description: Salesforce Token Url - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
