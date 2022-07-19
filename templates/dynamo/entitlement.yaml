@@ -57,6 +57,17 @@ Resources:
         ProvisionedThroughput:
           ReadCapacityUnits: "0"
           WriteCapacityUnits: "0"
+      -
+        IndexName: "CustomerIDindex"
+        KeySchema:
+        - 
+          AttributeName: "CustomerID"
+          KeyType: "HASH"
+        Projection:
+          ProjectionType: "ALL"
+        ProvisionedThroughput:
+          ReadCapacityUnits: "0"
+          WriteCapacityUnits: "0"
       TableName: !Join ['-', [!Ref TableName, !Ref Environment]]
       SSESpecification:
         SSEEnabled: true 
