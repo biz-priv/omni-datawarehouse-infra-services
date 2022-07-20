@@ -1,6 +1,6 @@
 template_path: ssm/parameter.yaml
 parameters:
-  Name: /omni-dw/{{ stack_group_config.Environment }}/netsuit/intercompany 
+  Name: /omni-dw/{{ stack_group_config.Environment }}/netsuit/intercompany/url 
   Value: "https://1238234-sb1.restlets.api.netsuite.com/app/site/hosting/restlet.nl?script=649&deploy=1"
   Description: netsuitAR intercompany - {{ stack_group_config.Environment }}
 stack_tags:
