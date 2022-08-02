@@ -1,7 +1,7 @@
 template_path: ssm/parameter.yaml
 parameters:
   Name: /omni-dw/hydraFacialReport/{{ stack_group_config.Environment }}/smtp/receiver
-  Value: "sujit.das@bizcloudexperts.com,kiranv@bizcloudexperts.com,tholland@omnilogistics.com,mrayl@omnilogistics.com"
+  Value: "sujit.das@bizcloudexperts.com,kiranv@bizcloudexperts.com,mrayl@omnilogistics.com,domlogistics@hydrafacial.com,dberg@hydrafacial.com,cwells@hydrafacial.com,laxhydrafacial@omnilogistics.com,whitegloveservice@hydrafacial.com,pnguyen@hydrafacial.com,datawarehouse@hydrafacial.com"
   Description: Hydrafacial smtp receiver - {{ stack_group_config.Environment }}
 stack_tags:
   "Application": {{ stack_group_config.Application }}
