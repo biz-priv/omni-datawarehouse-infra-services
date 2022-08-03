@@ -13,7 +13,7 @@ Resources:
     Properties:
       BucketName: !Join ['-', [!Ref BucketName, !Ref Environment]]
       VersioningConfiguration:
-        Status: Enabled
+        Status: Suspended
       BucketEncryption: 
          ServerSideEncryptionConfiguration: 
            -
