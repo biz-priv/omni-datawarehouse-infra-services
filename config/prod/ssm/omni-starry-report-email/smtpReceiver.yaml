@@ -1,0 +1,10 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/omni-starry-report-email/{{ stack_group_config.Environment }}/smtp/receiver
+  Value: "acuartas@starry.com','lspencer@starry.com','lpietraszek@starry.com','ausops@omnilogistics.com','kodriscoll@starry.com','mish@bizcloudexperts.com','asalaices@omnilogistics.com','kiranv@bizcloudexperts.com"
+  Description: omni starry report email smtp receiver - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
