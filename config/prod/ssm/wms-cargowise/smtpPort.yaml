@@ -1,0 +1,11 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/{{ stack_group_config.Environment }}/smtp/port
+  Value: "587"
+  Description: omni-wms-api-service smtp port - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
+

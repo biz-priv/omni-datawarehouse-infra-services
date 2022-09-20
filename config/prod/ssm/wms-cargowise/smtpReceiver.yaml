@@ -1,0 +1,11 @@
+template_path: ssm/parameter.yaml
+parameters:
+  Name: /omni-dw/s3Trigger/{{ stack_group_config.Environment }}/smtp/receiver
+  Value: "kiranv@bizcloudexperts.com;sujit.das@bizcloudexperts.com"
+  Description: s3Trigger smtp receiver - {{ stack_group_config.Environment }}
+stack_tags:
+  "Application": {{ stack_group_config.Application }}
+  "CreateBy": {{ stack_group_config.CreateBy }}
+  "Version": {{ stack_group_config.Version }}
+  "Environment": {{ stack_group_config.Environment }}
+
