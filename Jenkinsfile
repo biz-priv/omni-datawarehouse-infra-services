@@ -28,10 +28,6 @@ pipeline {
                 anyOf {
                     branch 'master';
                     branch 'develop';
-                    branch 'devint';
-                    branch 'bugfix/*';
-                    branch 'feature/*';
-                    branch 'task/*';
                 }
                 expression {
                     return true;
